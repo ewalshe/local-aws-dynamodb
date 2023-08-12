@@ -5,7 +5,7 @@ See the [DynamoDB documentation](https://docs.aws.amazon.com/amazondynamodb/late
 Specifically [deploying DynamoDB locally](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html)
 
 ## Prerequisites
-Create a Docker volume named `dynamodb-data` to persist the data.
+Create a Docker volume named `dynamodb-data` to persist data.
 
 ## Running
 
@@ -28,7 +28,7 @@ aws dynamodb list-tables --endpoint-url http://localhost:9000
 First export the instance URL as an environment variable:
 ```bash
 export DYNAMODB_URL=http://localhost:9000
-ecport TABLE_NAME=UniqueItemTableName
+export TABLE_NAME=UniqueItemTableName
 ```
 
 Then use the `boto3` library to access the local DynamoDB instance:
